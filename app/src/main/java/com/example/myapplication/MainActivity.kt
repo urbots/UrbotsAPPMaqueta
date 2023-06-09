@@ -39,7 +39,7 @@ open class MainActivity : ComponentActivity() {
             val missatge = codificaMissatge(missatgeText.text.toString().toInt())
             try {
                 sendMessage(ip, missatge)
-                content.setText("Missatge enviat=>" + missatge)
+                content.setText("Missatge enviat=>" + missatge+"\nIP:"+ip+":"+PORT)
             }catch (e: java.lang.Exception){
                 content.setText("ERROR: "+e.toString())
             }
@@ -48,7 +48,7 @@ open class MainActivity : ComponentActivity() {
 
     }
     private fun codificaMissatge(valor: Int): String {
-        return "S0|10110000|"+valor+"|"+valor+"|"+valor+"*"
+        return "S0|10110000|"+valor+"|"+valor+"|"+valor+"|"+valor+"|"+valor+"|"
     }
     private fun sendMessage(ip: String, message: String) {
         Thread {

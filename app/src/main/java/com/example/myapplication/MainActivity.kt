@@ -20,7 +20,7 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
-class MainActivity : ComponentActivity() {
+open class MainActivity : ComponentActivity() {
     private lateinit var sendButton: Button
     private lateinit var ipEditText: EditText
     private lateinit var missatgeText: EditText

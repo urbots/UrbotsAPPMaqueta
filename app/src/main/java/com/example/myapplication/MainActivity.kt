@@ -48,7 +48,7 @@ open class MainActivity : ComponentActivity() {
 
     }
     private fun codificaMissatge(valor: Int): String {
-        return "S0|10110000|"+valor+"|"+valor+"|"+valor+"|"+valor+"|"+valor+"|"
+        return "S|10110000|"+valor+"|"+valor+"|"+valor+"|"+valor+"|"+valor+"|"
     }
     private fun sendMessage(ip: String, message: String) {
         Thread {
